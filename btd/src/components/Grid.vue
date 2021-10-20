@@ -1,7 +1,7 @@
 <template>
     <div class="grid">
         <div v-for= "i in 400" :key= "i" class='grid-box'>
-            {{i}}
+           
         </div>
     </div>
 </template>
@@ -20,12 +20,17 @@ export default {
 <style scoped>
 .grid {
     display: grid;
-    grid-template-columns: repeat(20, 1fr)
+    grid-template-columns: repeat(20, 1fr);
+    grid-column-gap: 0px;
+    width: 60%;
+
 }
 
 .grid-box {
-    width: 20px;
-    width: 20px;
+    padding: 0px;
+    margin: 0px;
+    height: 27.1px;
+    width: 27.1px;
    border: 1px solid #000;
    
 }
