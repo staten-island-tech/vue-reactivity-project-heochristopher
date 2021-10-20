@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/maps/chutes.png">
-    <HelloWorld msg="Vloons Tower Defense"/>
-  </div>
+    <Grid/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Grid from './components/Grid'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Grid
   }
 }
 </script>
 
 <style>
-#app {
+html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
