@@ -1,21 +1,22 @@
 <template>
 <div class="container">
- <Grid/>
-    <Colors/>
+    <Grid/>
+    <Color/>
 </div>
    
 </template>
 
 <script>
 
+import Color from './components/Color'
 import Grid from './components/Grid'
-import Colors from './components/Colors'
+
 
 export default {
   name: 'App',
   components: {
     Grid,
-    Colors
+    Color
   }
 }
 </script>

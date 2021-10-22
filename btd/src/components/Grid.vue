@@ -1,8 +1,6 @@
 <template>
     <div class="grid">
-        <div v-for= "i in 400" :key= "i" class='grid-box'>
-           
-        </div>
+        <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox()"></div>
     </div>
 </template>
 
@@ -12,6 +10,11 @@ export default {
     data() {
         return {
 
+        }
+    },
+    methods: {
+        fillBox() {
+            console.log('hey')
         }
     }
 }

@@ -6,7 +6,7 @@
       class="grid-box"
       :id="`${color}`"
       :style="`background-color: ${color}`"
-      @click='`changeColor(${color})`'
+      @click='changeColor(`${color}`)'
     >
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "Colors",
+  name: "Color",
   data() {
     return {
       colors: [
@@ -27,8 +27,8 @@ export default {
         "orange",
         "pink",
       ],
-    },
-  }
+    }
+  },
    methods: {
         changeColor(color) {
             console.log(color)
