@@ -31,6 +31,7 @@ export default {
   },
    methods: {
         changeColor(color) {
+          this.$emit(color)
             console.log(color)
         }
     },
