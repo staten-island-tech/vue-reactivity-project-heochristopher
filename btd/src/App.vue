@@ -1,8 +1,8 @@
 <template>
 <div class="container">
  <h2>{{color}}</h2>
-    <Grid/>
-    <Color/>
+    <Grid :gridColor= this.myColor />
+    <Color @btnClick="getColor"/>
     <Tools/>
 </div>
    
@@ -24,9 +24,14 @@ export default {
   },
   data(){
     return{
-      color:""
+      myColor: ''
     }
-    
+  },
+  methods: {
+    getColor(color) {
+      this.myColor = color
+      console.log(this.myColor)
+    }
   }
 }
 </script>

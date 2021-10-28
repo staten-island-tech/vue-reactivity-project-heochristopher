@@ -6,7 +6,7 @@
       class="grid-box"
       :id="`${color}`"
       :style="`background-color: ${color}`"
-    v-on:click="$emit(color)"
+      @click="$emit('btnClick', color)"
     >
     </div>
   </div>
@@ -27,15 +27,12 @@ export default {
         "orange",
         "pink",
       ],
+
+
     }
   },
    methods: {
-        changeColor(color) {
-          
-          this.$emit(color)
-            console.log(color)
-        }
-    },
+   }
 };
 </script>
 

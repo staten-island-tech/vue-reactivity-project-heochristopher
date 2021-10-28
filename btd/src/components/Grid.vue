@@ -1,12 +1,15 @@
 <template>
     <div class="grid">
-        <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox()"></div>
+        <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox"></div>
     </div>
 </template>
 
 <script>
 export default {
     name: 'Grid',
+    props: {
+        gridColor: String
+    },
     data() {
         return {
           
@@ -14,7 +17,7 @@ export default {
     },
     methods: {
         fillBox() {
-            console.log('hey')
+            console.log(this.gridColor)
             
         }
     }
