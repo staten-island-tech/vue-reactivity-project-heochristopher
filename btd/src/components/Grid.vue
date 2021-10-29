@@ -1,6 +1,7 @@
 <template>
     <div class="grid">
-        <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox"></div>
+        <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox(i)" :id='`${i}`'></div>
+        <input @keyup.space='fillBox("tool")'>
     </div>
 </template>
 
@@ -16,9 +17,11 @@ export default {
         }
     },
     methods: {
-        fillBox() {
-            console.log(this.gridColor)
-            
+        fillBox(box) {
+            if(box == "tool") {
+                document.getElementById(box).style.backgroundColor = '#ffffff'
+            }
+            document.getElementById(box).style.backgroundColor = this.gridColor
         }
     }
 }
