@@ -25,7 +25,6 @@ export default {
   methods: {
     getColor(color) {
       this.myColor = color
-      console.log(this.myColor)
     }
   }
 }
@@ -38,6 +37,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  overflow-y:hidden;
 }
 
 .container {

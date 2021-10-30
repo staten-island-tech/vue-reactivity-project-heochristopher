@@ -1,14 +1,18 @@
 <template>
+<div class="container">
+  <h1>{{userColor}}</h1>
   <div class="grid">
+    
     <div
       v-for="color in colors"
       :key="color"
       class="grid-box"
       :id="`${color}`"
       :style="`background-color: ${color}`"
-      @click="$emit('btnClick', color)"
+      @click="$emit('btnClick', color), displayColor(color)"
     >
     </div>
+  </div>
   </div>
 </template>
 
@@ -27,16 +31,23 @@ export default {
         "orange",
         "pink",
       ],
-
-
+      userColor: 'black'
     }
   },
    methods: {
+     displayColor(color) {
+       this.userColor = color
+     }
    }
 };
 </script>
 
 <style scoped>
+.conatiner{
+  display: flex;
+  overflow-y:hidden;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
