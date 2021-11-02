@@ -8,7 +8,7 @@
       class="grid-box"
       :id="`${color}`"
       :style="`background-color: ${color}`"
-      @click="$emit('btnClick', color), displayColor(color)"
+      @click="$emit('btnClick', color)"
     >
     </div>
   </div>
@@ -30,13 +30,9 @@ export default {
         "orange",
         "pink",
       ],
-      userColor: 'black'
     }
   },
    methods: {
-     displayColor(color) {
-       this.userColor = color
-     }
    }
 };
 </script>

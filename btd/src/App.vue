@@ -1,5 +1,6 @@
 <template>
 <div class="container">
+  <h1>{{displayColor}}</h1>
   <Grid :gridColor= this.myColor />
   <Color @btnClick="getColor"/>
   <Tool @changeTool="chooseTool"/>
@@ -22,20 +23,24 @@ export default {
   },
   data(){
     return{
-      myColor: ''
+      myColor: '',
+      displayColor: 'black'
     }
   },
   methods: {
     getColor(color) {
       this.myColor = color
+      this.displayColor = color
     },
     chooseTool(tool) {
       if(tool === 'pen' && this.myColor != '#fff') {
         return
       } else if (tool === 'pen' && this.myColor === '#fff') {
         this.myColor = '#000'
+        this.displayColor = 'black'
       } else {
         this.myColor = '#fff'
+        this.displayColor = 'eraser'
       }
     }
   }
