@@ -2,6 +2,7 @@
 <div class="container">
   <Grid :gridColor= this.myColor />
   <Color @btnClick="getColor"/>
+  <Tool @changeTool="chooseTool"/>
 </div>
    
 </template>
@@ -10,12 +11,14 @@
 
 import Color from './components/Color'
 import Grid from './components/Grid'
+import Tool from './components/Tool'
 
 export default {
   name: 'App',
   components: {
     Grid,
     Color,
+    Tool
   },
   data(){
     return{
@@ -25,6 +28,15 @@ export default {
   methods: {
     getColor(color) {
       this.myColor = color
+    },
+    chooseTool(tool) {
+      if(tool === 'pen' && this.myColor != '#fff') {
+        return
+      } else if (tool === 'pen' && this.myColor === '#fff') {
+        this.myColor = '#000'
+      } else {
+        this.myColor = '#fff'
+      }
     }
   }
 }

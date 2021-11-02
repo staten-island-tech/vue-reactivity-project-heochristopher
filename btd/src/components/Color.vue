@@ -2,7 +2,6 @@
 <div class="container">
   <h1>{{userColor}}</h1>
   <div class="grid">
-    
     <div
       v-for="color in colors"
       :key="color"

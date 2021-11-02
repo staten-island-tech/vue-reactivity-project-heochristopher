@@ -1,5 +1,5 @@
 <template>
-    <div class="grid">
+    <div class="grid" >
         <div v-for= "i in 400" :key= "i" class='grid-box' @click="fillBox(i)" :id='`${i}`'></div>
     </div>
 </template>
@@ -12,7 +12,6 @@ export default {
     },
     data() {
         return {
-          
         }
     },
     methods: {
@@ -22,8 +21,7 @@ export default {
             } else {
                 document.getElementById(box).style.backgroundColor = this.gridColor
             }
-            
-        }
+        },
     }
 }
 </script>
